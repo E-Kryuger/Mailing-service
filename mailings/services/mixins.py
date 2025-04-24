@@ -8,8 +8,11 @@ from django.shortcuts import get_object_or_404
 from mailings.models import Mailing
 from mailings.services.cache_service import create_cache_key_for_object_list
 from mailings.services.utils import is_manager, is_owner
-from users.management.commands.create_managers import GROUP_NAME
 from users.models import User
+
+from django.conf import settings
+
+GROUP_NAME = settings.MANAGERS_GROUP
 
 
 class OwnerQuerySetMixin:
