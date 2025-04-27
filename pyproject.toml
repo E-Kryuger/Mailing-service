@@ -1,0 +1,139 @@
+[tool.poetry]
+name = "mailing-service"
+version = "0.1.0"
+description = ""
+authors = ["Евгения Крюгер <Evgenia.Kryuger@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.2"
+apscheduler="3.11.0"
+asgiref="3.8.1"
+asttokens="3.0.0"
+attrs = "24.2.0"
+backcall = "0.2.0"
+beautifulsoup4 = "4.12.3"
+bleach = "6.2.0"
+build = "1.2.1"
+certifi = "2024.7.4"
+charset-normalizer = "3.3.2"
+cleo = "2.1.0"
+click = "8.1.7"
+colorama = "0.4.6"
+crashtest = "0.4.1"
+decorator = "5.1.1"
+defusedxml = "0.7.1"
+distlib = "0.3.8"
+django-apscheduler = "0.7.0"
+docopt = "0.6.2"
+dulwich = "0.21.7"
+et-xmlfile = "1.1.0"
+executing = "2.1.0"
+fastjsonschema = "2.20.0"
+filelock = "3.15.4"
+idna = "3.7"
+iniconfig = "2.0.0"
+installer = "0.7.0"
+ipython = "8.28.0"
+jedi = "0.19.2"
+jsonschema = "4.23.0"
+jsonschema-specifications = "2024.10.1"
+keyring = "24.3.1"
+matplotlib-inline = "0.1.7"
+mistune = "3.0.2"
+more-itertools = "10.3.0"
+msgpack = "1.0.8"
+mypy-extensions = "1.0.0"
+nbclient = "0.10.1"
+nbconvert = "7.16.4"
+nbformat = "5.10.4"
+numpy = "2.1.0"
+openpyxl = "3.1.5"
+packaging = "24.1"
+pandas = "2.2.2"
+pandocfilters = "1.5.1"
+parso = "0.8.4"
+pathspec = "0.12.1"
+pexpect = "4.9.0"
+pickleshare = "0.7.5"
+pillow = "11.0.0"
+pkginfo = "1.11.1"
+platformdirs = "4.3.6"
+pluggy = "1.5.0"
+poetry = "1.8.3"
+poetry-core = "1.9.0"
+poetry-plugin-export = "1.8.0"
+psycopg2 = "2.9.10"
+psycopg2-binary = "2.9.10"
+ptyprocess = "0.7.0"
+pytest = "8.3.2"
+python-dateutil = "2.9.0.post0"
+python-dotenv = "1.0.1"
+pytz = "2024.1"
+pywin32 = "308"
+pywin32-ctypes = "0.2.2"
+pyzmq = "26.2.0"
+referencing = "0.35.1"
+requests = "2.32.3"
+requests-toolbelt = "1.0.0"
+rpds-py = "0.22.3"
+shellingham = "1.5.4"
+six = "1.16.0"
+soupsieve = "2.6"
+sqlparse = "0.5.1"
+stack-data = "0.6.3"
+tabulate = "0.9.0"
+telebot = "0.0.5"
+tinycss2 = "1.4.0"
+tomlkit = "0.12.5"
+tornado = "6.4.2"
+traitlets = "5.14.3"
+trove-classifiers = "2024.7.2"
+tzdata = "2024.1"
+tzlocal = "5.3.1"
+urllib3 = "2.2.2"
+virtualenv = "20.26.6"
+wcwidth = "0.2.13"
+webencodings = "0.5.1"
+yarg = "0.1.9"
+
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+# Максимальная длина строки
+line-length = 119
+# Файлы, которые не нужно форматировать
+exclude = '''
+(
+  /(
+      \.eggs         # Исключить несколько общих каталогов
+    | \.git          # в корне проекта
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | dist
+  )/
+  | foo.py           # Также отдельно исключить файл с именем foo.py
+                     # в корне проекта
+)
+'''
+
+[tool.isort]
+# максимальная длина строки
+line_length = 119
+
+[tool.mypy]
+disallow_untyped_defs = true
+no_implicit_optional = true
+warn_return_any = true
+exclude = 'venv'
