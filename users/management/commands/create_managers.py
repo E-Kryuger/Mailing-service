@@ -5,7 +5,9 @@ from django.core.management import BaseCommand
 from mailings.models import Client, Message, Mailing
 from users.models import User
 
-GROUP_NAME = "Менеджеры"
+from django.conf import settings
+
+GROUP_NAME = settings.MANAGERS_GROUP
 GROUP_PERMISSIONS = [
     ("view_all_clients", ContentType.objects.get_for_model(Client)),
     ("view_all_messages", ContentType.objects.get_for_model(Message)),

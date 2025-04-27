@@ -5,8 +5,10 @@ from django.shortcuts import get_object_or_404
 from mailings.models import Mailing, Client, MailingAttempt
 from mailings.services.cache_service import create_key_part
 from mailings.services.utils import is_manager
-from users.management.commands.create_managers import GROUP_NAME
 from users.models import User
+from django.conf import settings
+
+GROUP_NAME = settings.MANAGERS_GROUP
 
 
 def get_mailing_statistics(context, user):

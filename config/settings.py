@@ -158,3 +158,5 @@ if CACHE_ENABLED:
             "LOCATION": os.getenv("REDIS_HOST"),
         }
     }
+
+MANAGERS_GROUP = "Менеджеры"
